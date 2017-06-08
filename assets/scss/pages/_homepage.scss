@@ -1,0 +1,29 @@
+// ==============================================================
+// HOMEPAGE
+//
+// Styles and positioning for the slick slider homepage widget
+// ==============================================================
+
+// -----------------------------------------
+// ## homepage slider
+// .homepage-slider {
+//   height: 75vh;
+//   width: 100vw;
+//
+//   // left slides
+//   .home-slide-left {
+//     width: 50vw !important;
+//     height: 75vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     padding: 4% 1% 4% 4%;
+//   }
+//
+//   // right slides
+//   .home-slide-right {
+//     @extend .home-slide-left;
+//     padding: 4% 4% 4% 1%;
+//   }
+//
+// } // end .homepage-slider

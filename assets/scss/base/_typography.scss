@@ -1,0 +1,27 @@
+// ==============================================================
+// # TYPOGRAPHY
+//
+// Global typographic styles for giftwrapcreations.com
+// ==============================================================
+
+// -----------------------------------------
+// ## paragraph tags
+// Removes the margin from the final <p> tag in a section
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// -----------------------------------------
+// ## heading tags
+h1 {
+  letter-spacing: -2px;
+}
+
+// -----------------------------------------
+// ## uk-text-lead style adjustment
+.uk-text-lead {
+  color: $color-gray-AAlarge;
+  font-size: 1.3rem;
+}

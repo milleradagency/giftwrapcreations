@@ -1,0 +1,59 @@
+// ==============================================================
+// MEET ANITA
+// ==============================================================
+
+
+// -----------------------------------------
+// ## anita img
+#anitaPhoto {
+
+  & img {
+    // height: 520px;
+  }
+
+  & .uk-box-shadow-medium {
+    opacity: 0;
+  }
+}
+
+// -----------------------------------------
+// ## split phrase widget "Meet Anita"
+#meetAnita {
+  position: absolute;
+  top: -113px;
+  right: 0;
+  z-index: 1;
+  padding: 40px 20px;
+  width: 51%;
+  background: rgba(120,131,144,.65);
+
+  // h1 title widget
+  & .elementor-heading-title {
+    color: white;
+    text-transform: uppercase;
+
+    // span one — meet
+    & #meet {
+      font-size: 70px;
+      font-weight: 300;
+      letter-spacing: -5px;
+      position: relative;
+      left: 27px;
+      line-height: 1;
+    }
+
+    // span two — anita
+    & #anita {
+      font-size: 130px;
+      font-weight: 700;
+      letter-spacing: -10px;
+      line-height: 0.7;
+    }
+  } // end .elementor-heading-title
+} // end meetAnita
+
+// -----------------------------------------
+// ## anita bio
+#anitaBio p {
+  opacity: 0;
+}

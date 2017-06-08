@@ -1,0 +1,112 @@
+// ==============================================================
+// CONTACT
+// ==============================================================
+
+// -----------------------------------------
+// ## contact form input styles
+// class refers to body class of contact page assigned by wordpress
+.page-id-448 {
+
+  & .elementor-widget-wrap div {
+    opacity: 0;
+  }
+
+  // label
+  & .elementor-field-label {
+    cursor: initial !important;
+  }
+
+  // standard input fields
+  & input {
+    background-color: rgba(255,255,255,.65) !important;
+  }
+
+  // checkboxes
+  & .elementor-field-type-checkbox {
+    background-color: rgba(255,255,255,.65);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+// -----------------------------------------
+// ## contact page background image
+// class refers to body class of contact page assigned by wordpress
+.page-id-448 {
+  & #wrap {
+    transition: background-image 1s ease-in-out;
+    background-image: url('/wp-content/uploads/dgwc-bg-blank.jpg');
+    background-repeat: no-repeat;
+    background-position: -18% 22%;
+    background-size: 200%;
+    cursor: initial;
+
+    @media (min-width: 375px) {
+      background-position: -15% 25%;
+      background-size: 190%;
+    }
+
+    @media (min-width: 412px) {
+      background-position: -16% 25%;
+      background-size: 180%;
+    }
+
+    @media (min-width: 768px) {
+      background-position: 900% 28%;
+      background-size: 95%;
+    }
+
+    @media (min-width: 1024px) {
+      background-position: 1000% 20%;
+      background-size: 95%;
+    }
+
+    @media (min-width: 1440px) {
+      background-position: 600px;
+      background-size: contain;
+    }
+
+    @media (min-width: 1600px) {
+      background-position: 700px;
+    }
+
+    @media (min-width: 1800px) {
+      background-position: 900px;
+      background-size: 90%;
+    }
+
+    @media (min-width: 2000px) {
+      background-size: 92%;
+    }
+
+    @media (min-width: 2200px) {
+      background-position: 1000px;
+      background-size: 80%;
+    }
+
+    @media (min-width: 2400px) {
+      background-position: 1200px;
+      background-size: 60%;
+    }
+  }
+}
+
+// -----------------------------------------
+// ## contact background page fade-in animation
+// class replaces the background-image property with a jpg img
+// to create a "fade in" effect
+.page-id-448 {
+  & #wrap.bg-img-in {
+    background-image: url('/wp-content/uploads/dgwc-004.jpg');
+  }
+}
+
+// -----------------------------------------
+// ## contact background page fade-out animation
+// class replaces the background-image property with a blank jpg img
+// to create a "fade out" effect
+.page-id-448 {
+  & #wrap.bg-img-out {
+    background-image: url('/wp-content/uploads/dgwc-bg-blank.jpg') !important;
+  }
+}

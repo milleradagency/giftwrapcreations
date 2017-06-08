@@ -1,0 +1,32 @@
+// ==============================================================
+// # MAIN NAVIGATION
+//
+// These styles are applied to the primary naivation menu
+// on devices with a width above 960px
+// ==============================================================
+
+// -----------------------------------------
+// ## main nav is wrapped inside nav.main-navigation
+.main-navigation {
+
+  // ul.main-menu is the actual list
+  & .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+// -----------------------------------------
+// ## social icons ( #oceanwp-social-menu )
+// social icons are wrapped in div.social-menu-inner
+.social-menu-inner {
+
+  // list items wrap <a> tags that contain the font-awesome spans
+  & .oceanwp-facebook,
+  & .oceanwp-instagram {
+    font-size: 25px;
+  }
+}

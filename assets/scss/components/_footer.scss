@@ -1,0 +1,78 @@
+// ==============================================================
+// # FOOTER
+//
+// These styles are applied to the site footer
+// ==============================================================
+
+// -----------------------------------------
+// ## footer copyright type style
+#copyright {
+  font-family: Montserrat, sans-serif;
+
+  & p {
+    color: $color-gray-AAlarge !important;
+  }
+}
+
+// -----------------------------------------
+// ## footer border and spacing style
+.site-footer {
+  padding: 20px 0;
+  margin: 36px auto 0;
+
+  // border top used as a :before to apply animation
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    left: 0;
+    border-top: 1px solid $color-gray-light;
+    transition: right 1s ease-out;
+  } // end before
+
+  // javascript will apply this class, which has the necessary :after
+  // adjustment for the left-to-right animation
+  &.border-animation {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0 !important;
+      left: 0;
+      border-top: 1px solid $color-gray-light;
+      transition: right 1s ease-out;
+    }
+  }
+}
+
+// -----------------------------------------
+// ## p.copyright style
+.copyright {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+// -----------------------------------------
+// ## p.miller-ad-agency style
+.miller-ad-agency {
+  margin: 0 auto;
+}
+
+// -----------------------------------------
+// ## forces transparent backgrounds on all footer elements
+.site-footer,
+#footer-inner,
+#footer-bottom,
+#footer-bottom-inner {
+  z-index: 1;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+// -----------------------------------------
+// ## opaicty:0 for .site-footer
+// velocity fadeIn triggers after a .delay()
+.site-footer {
+  opacity: 0;
+}

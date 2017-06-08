@@ -1,0 +1,43 @@
+// ==============================================================
+// SERVICES
+// ==============================================================
+
+// -----------------------------------------
+// ## setting flip-box to opaicty: 0 for velocity effects
+// page-id-386 is the body class wordpress assigns to the Services page
+.page-id-386 {
+  & .elementor-row h1,
+  & .elementor-row p {
+    opacity: 0;
+  }
+}
+
+// -----------------------------------------
+// ## setting flip-box to opaicty: 0 for velocity effects
+.elementor-flip-box {
+  opacity: 0;
+}
+
+// -----------------------------------------
+// ## text styles
+// class adds base typography style tweaks to flipbox
+.anita-flipbox {
+  & .elementor-flip-box__layer__overlay {
+    padding: 20px;
+  }
+
+  & .elementor-flip-box__layer__description {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+// -----------------------------------------
+// ## text shadow
+// adds a light textshadow over titles and text
+.anita-flipbox-textshadow {
+  & .elementor-flip-box__layer__title,
+  & .elementor-flip-box__layer__description {
+    text-shadow: 0px 0px 10px rgba(0,0,0,.35);
+  }
+}
