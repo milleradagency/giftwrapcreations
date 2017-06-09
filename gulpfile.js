@@ -85,8 +85,60 @@ gulp.task('watch', function() {
   gulp.watch('assets/scss/**/*.scss', ['default']);
 });
 
-gulp.task('babel', () => {
-  return gulp.src('assets/javascript/app.js')
+gulp.task('babel-global', () => {
+  return gulp.src('assets/javascript/dgwc.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+    .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('babel-homepage', () => {
+  return gulp.src('assets/javascript/homepage.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+    .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('babel-anita', () => {
+  return gulp.src('assets/javascript/meetAnita.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+    .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('babel-services', () => {
+  return gulp.src('assets/javascript/services.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+    .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('babel-contact', () => {
+  return gulp.src('assets/javascript/contact.js')
     .pipe(babel({
       presets: ['es2015']
     }))

@@ -17,6 +17,21 @@
 
   // controls
   & .homepage-tabs-controls {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    padding: 8px;
+    margin: 8px auto;
+
+    & li {
+      padding: 0;
+      &:last-of-type {
+        padding-left: 16px;
+      }
+    }
+
     & a { // arrow links
       color: $color-primary;
       background-color: $color-accent;

@@ -1,0 +1,1 @@
+"use strict";jQuery(document).ready(function(a){a(".uk-box-shadow-medium").delay(600).velocity("transition.fadeIn"),a("#anitaBio p").velocity("transition.slideUpIn",{stagger:300,drag:!0});var b=a(".custom-logo-link"),c=a(".menu-link");c.on("click",function(){a("#meetAnita").velocity("transition.fadeOut")})});

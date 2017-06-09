@@ -50,7 +50,7 @@ function oceanwp_child_enqueue_parent_style() {
 
 	// ------------------------------
 	// # App.js
-	wp_enqueue_script( 'appJS', get_stylesheet_directory_uri() . '/assets/js/app.js', array( 'velocity_ui' ), $version, true );
+	// wp_enqueue_script( 'appJS', get_stylesheet_directory_uri() . '/assets/js/app.js', array( 'velocity_ui' ), $version, true );
 
 	// ------------------------------
   // # PAGE => Homepage

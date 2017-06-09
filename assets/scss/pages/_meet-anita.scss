@@ -143,6 +143,11 @@
 
 // -----------------------------------------
 // ## anita bio
-#anitaBio p {
-  opacity: 0;
+#anitaBio {
+  max-width: 630px;
+  margin: 0 auto;
+  
+  & p {
+    opacity: 0;
+  }
 }

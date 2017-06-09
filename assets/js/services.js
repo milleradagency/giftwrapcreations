@@ -1,0 +1,1 @@
+"use strict";jQuery(document).ready(function(a){var b="transition.fadeIn";a(".elementor-row h1").velocity(b),a(".elementor-row p").velocity(b,{stagger:100,drag:!0}),a(".elementor-section-wrap .elementor-flip-box").velocity("transition.slideUpIn",{stagger:300,drag:!0})});
