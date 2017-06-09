@@ -5,14 +5,18 @@
 // ==============================================================
 
 #homepage-tabs {
+  min-height: calc(100vh - 101px);
+  max-height: calc(100vh - 101px);
+  height: calc(100vh - 101px);
+  overflow: hidden;
+  background: $color-primary;
+  @media (min-width: 960px) { background: #fff; }
 
   // forces modal opacity
-  & .uk-modal-dialog { opacity: 0; display: none; transition: $transition-ease-slow; }
-  // & .uk-modal-dialog.homepage-tabs-active { opacity: 1; display: block; }
+  & .homepage-tabs-wrapper-outer { opacity: 0; display: none; transition: $transition-ease-slow; }
 
   // controls
-  & .uk-iconnav {
-
+  & .homepage-tabs-controls {
     & a { // arrow links
       color: $color-primary;
       background-color: $color-accent;
@@ -21,11 +25,13 @@
       &:hover, &:focus {
         color: $color-accent;
         background-color: $color-primary;
-      }
-    }
-  }
+      } // end hover
+    } // end a
+  } // end controls
 
   & h1 {
+    color: #fff;
+    @media (min-width: 960px) { color: $color-primary; }
     font-size: 1.5rem;
     letter-spacing: 0;
     line-height: 1;
@@ -33,36 +39,55 @@
   }
 
   & h2 {
+    color: #fff;
+    @media (min-width: 960px) { color: $color-primary; }
     font-size: 1.1rem;
     text-transform: none;
     font-style: italic;
     letter-spacing: -1px;
-    color: $color-gray-AAlarge;
     margin: 0 0 1rem;
   }
 
   & hr {
-    border-top: 2px solid $color-primary;
+    border-top: 2px solid #fff;
+    @media (min-width: 960px) { border-color: $color-primary; }
     width: 60%;
   }
 
   & p {
+    color: #fff;
+    @media (min-width: 960px) { color: $color-primary; }
     font-size: .875rem;
-    @media (min-width:412px) { font-size: 1rem; }
+    line-height: 1.25;
+    @media (min-width: 412px) { font-size: 1rem; line-height: 1.5;}
   }
 
-  & .uk-padding-large { // text div
-    min-height: 402px;
-    background: rgba(255,255,255,.85);
-    border-bottom: 1px solid $color-gray-light;
-    @media (min-width:640px) { border-bottom: 0; }
+  & .homepage-tabs-text-wrapper { // text div
+    min-height: calc(100vh - 101px);
+    height: calc(100vh - 101px);
+    background: rgba(0,0,0,.85);
+    @media (min-width: 960px) { background: #fff; }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 
-  & .uk-height-large { // photo div
-    position: relative;
+  & .homepage-tabs-wrapper-inner { // grid wrapper
+    min-height: calc(100vh - 101px);
+    height: calc(100vh - 101px);
+  }
+
+  & .homepage-tabs-img { // photo div
+    position: absolute;
+    @media (min-width: 960px) { position: relative; }
     z-index: -1;
-    margin-top: -165px;
-    @media (min-width:640px) { z-index: 0; margin-top: 0; }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: calc(100vh - 101px);
+    height: calc(100vh - 101px);
   }
 
   @media (min-width:412px) {
@@ -80,56 +105,20 @@
       text-transform: none;
       font-style: italic;
       letter-spacing: -1px;
-      color: $color-gray-AAlarge;
       margin: 0 0 1rem;
     }
   } // end @412
 
-  @media (min-width:640px) {
-    & .uk-height-large { // photo div
-      margin-top: 0 !important;
-    }
-  } // end @640
-
-  @media (min-width:768px) {
-    & .uk-grid-collapse { // grid wrapper
-      min-height: calc(100vh - 101px);
-      height: calc(100vh - 101px);
-    }
-
-    & .uk-height-large { // photo div
-
-      // min-height: 60vh;
-      // height: 60vh;
-    }
+  @media (min-width: 768px) {
   } // end @768
 
-  @media (min-width:1200px) {
-    & .uk-height-large { //photo div
-      // width: 30%;
-    }
-  } // end @1200
+  @media (min-width: 1024px) {
+  }
 
-  @media (min-width:1800px) {
-    & .uk-grid-collapse { // grid wrapper
-      // min-height: 75vh;
-      // height: 75vh;
-    }
-
-    & .uk-child-width-1-2\@s > * { // grid child divs
-      // width: 40%;
-    }
-
-    & .uk-height-large { //photo div
-      // min-height: 75vh;
-      // height: 75vh;
-    }
+  @media (min-width: 1800px) {
   } // end @1800
 
-  @media (min-width:2400px) {
-    & .uk-child-width-1-2\@s > * { // grid child divs
-      // width: 30%;
-    }
+  @media (min-width: 2400px) {
   } // end @2400
 }
 
@@ -141,13 +130,17 @@
 // -----------------------------------------
 // ## tab two
 #homepage-tabs-two {
-  & .uk-height-large {
-    margin-top: -115px;
-    z-index: 0;
+  & .homepage-tabs-text-wrapper {
+    background: rgba(0,0,0,.65);
+    @media (min-width: 960px) { background: #fff; }
+  }
+}
 
-    @media (min-height:768px) {
-      min-height: calc(100vh - 100px);
-      height: calc(100vh - 100px);
-    }
+// -----------------------------------------
+// ## tab three
+#homepage-tabs-three {
+  & .homepage-tabs-text-wrapper {
+    background: rgba(0,0,0,.65);
+    @media (min-width: 960px) { background: #fff; }
   }
 }
