@@ -6,6 +6,39 @@
 // ==============================================================
 
 // -----------------------------------------
+// ## navbar links
+.main-navigation { // nav wrapper
+
+  & .menu-link { // navbar link items <a> tags
+    color: $navbar-link-color;
+    background: $navbar-link-background;
+
+    & span { // spans inside <a> tags
+      padding: $navbar-link-padding;
+      background: $navbar-link-background;
+      transition: $navbar-link-transition-speed;
+    }
+
+    &:hover, &:focus {
+      color: $navbar-link-color-hover !important;
+      background: $navbar-link-background;
+      text-decoration: none;
+
+      & span {
+        background: $navbar-link-background-hover;
+      }
+    } // end .menu-link hover
+  } // end  .menu-link
+
+  // CURRENT MENU ITEM
+  & .current-menu-item > a {
+    font-weight: 400 !important;
+    text-decoration: underline;
+  }
+}
+
+
+// -----------------------------------------
 // ## main nav is wrapped inside nav.main-navigation
 .main-navigation {
 
@@ -21,12 +54,26 @@
 
 // -----------------------------------------
 // ## social icons ( #oceanwp-social-menu )
+// responsive social menu (hidden on mobile)
+#oceanwp-social-menu {
+  display: none !important;
+  @media (min-width:960px) { display: table !important; }
+}
+
 // social icons are wrapped in div.social-menu-inner
 .social-menu-inner {
 
   // list items wrap <a> tags that contain the font-awesome spans
-  & .oceanwp-facebook,
-  & .oceanwp-instagram {
+  & li {
     font-size: 25px;
+  }
+
+  & a {
+    padding: 6px 12px 2px !important;
+
+    &:hover, &:focus {
+      color: $navbar-link-color-hover !important;
+      background: $navbar-link-background-hover !important;
+    }
   }
 }

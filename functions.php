@@ -49,6 +49,10 @@ function oceanwp_child_enqueue_parent_style() {
 	wp_enqueue_script( 'dgwc', get_stylesheet_directory_uri() . '/assets/js/dgwc.js', array( 'velocity_ui' ), $version, true );
 
 	// ------------------------------
+	// # App.js
+	wp_enqueue_script( 'appJS', get_stylesheet_directory_uri() . '/assets/js/app.js', array( 'velocity_ui' ), $version, true );
+
+	// ------------------------------
   // # PAGE => Homepage
 	if ( is_page( array( 'Elementor', 'Home' ) ) ) {
   // if ( is_page( 'Home' ) ) {
@@ -58,6 +62,15 @@ function oceanwp_child_enqueue_parent_style() {
     // wp_enqueue_script( 'sudoSlider', get_stylesheet_directory_uri() . '/assets/plugins/sudoslider/js/jquery.sudoSlider.min.js', array( 'jquery' ), $version, true );
 		// sudoSlider init script
     wp_enqueue_script( 'homepage-custom', get_stylesheet_directory_uri() . '/assets/js/homepage.js', array( 'jquery-slick' ), $version, true );
+  }
+
+	// ------------------------------
+  // # PAGE => Elementor
+  if ( is_page( 'Elementor' ) ) {
+		// sudoSlider init script
+    wp_enqueue_script( 'meetAnita-custom', get_stylesheet_directory_uri() . '/assets/js/meetAnita.js', array( 'velocity_ui' ), $version, true );
+		wp_enqueue_script( 'services-custom', get_stylesheet_directory_uri() . '/assets/js/services.js', array( 'velocity_ui' ), $version, true );
+		wp_enqueue_script( 'contact-custom', get_stylesheet_directory_uri() . '/assets/js/contact.js', array( 'velocity_ui' ), $version, true );
   }
 
 	// ------------------------------

@@ -1,29 +1,43 @@
-<div class="homepage-slider" role="toolbar">
+<div id="homepage-tabs" class="uk-modal-full">
 
   <!-- Group 1 -->
-  <div class="home-slide-one home-slide-left">
-    <h1>Professional gift wrapping service.</h1>
-    <h2>Every gift, every occasion.</h2>
-    <hr />
-    <p>
-      Dallas Gift Wrap Creations manages everything from the design, recipient list, gift receipts, wrapping paper, tissue, ribbon patterns, toppers, monogramming and down to the very last bow, even for the smallest of gifts.
-    </p>
-  </div>
-  <div class="home-slide-one home-slide-right">
-    <img src="/wp-content/uploads/dgwc-001.jpg" alt=""/>
+  <div class="uk-modal-dialog homepage-tabs-active" id="homepage-tabs-one">
+    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle uk-flex-center" uk-grid>
+      <div class="uk-padding-large">
+        <h1 class="homepage-tabs-text">Professional gift wrapping service.</h1>
+        <h2 class="homepage-tabs-text">Every gift, every occasion.</h2>
+        <hr class="homepage-tabs-text" />
+        <p class="homepage-tabs-text">
+          Dallas Gift Wrap Creations manages everything from the design, recipient list, gift receipts, wrapping paper, tissue, ribbon patterns, toppers, monogramming and down to the very last bow, even for the smallest of gifts.
+        </p>
+        <!-- Controls -->
+        <ul class="uk-iconnav uk-flex-middle uk-flex-center">
+          <li><a class="hpt-back" id="hpt-back1" href="#" uk-icon="icon: arrow-left; ratio: 1.5"></a></li>
+          <li><a class="hpt-next" id="hpt-next1" href="#" uk-icon="icon: arrow-right; ratio: 1.5"></a></li>
+        </ul>
+      </div>
+      <div class="uk-background-contain uk-height-large home-tabs-img" style="background-image: url('/wp-content/uploads/dgwc-001-crop.jpg');"></div>
+    </div>
   </div>
 
   <!-- Group 2 -->
-  <div class="home-slide-two home-slide-left">
-    <h1>Meet Anita.</h1>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <hr />
-    <p>
-      Anita Ivancevic delivers an unparalleled vision to the Dallas luxury gift industry with each gift presentation she creates.
-    </p>
-  </div>
-  <div class="home-slide-two home-slide-right">
-    <img src="/wp-content/uploads/dgwc-001.jpg" alt=""/>
+  <div class="uk-modal-dialog" id="homepage-tabs-two">
+    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle uk-flex-center" uk-grid>
+      <div class="uk-padding-large">
+        <h1 class="homepage-tabs-text">Meet Anita.</h1>
+        <h2 class="homepage-tabs-text">Lorem ipsum dolor sit amet.</h2>
+        <hr class="homepage-tabs-text" />
+        <p class="homepage-tabs-text">
+          Anita Ivancevic delivers an unparalleled vision to the Dallas luxury gift industry with each gift presentation she creates.
+        </p>
+        <!-- Controls -->
+        <ul class="uk-iconnav uk-flex-middle uk-flex-center">
+          <li><a class="hpt-back" id="hpt-back2" href="#" uk-icon="icon: arrow-left; ratio: 1.5"></a></li>
+          <li><a class="hpt-next" id="hpt-next2" href="#" uk-icon="icon: arrow-right; ratio: 1.5"></a></li>
+        </ul>
+      </div>
+      <div class="uk-background-cover uk-height-large home-tabs-img" style="background-image: url('/wp-content/uploads/anita.jpg');"></div>
+    </div>
   </div>
 
 </div>

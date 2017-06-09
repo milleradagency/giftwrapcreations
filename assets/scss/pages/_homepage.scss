@@ -4,26 +4,150 @@
 // Styles and positioning for the slick slider homepage widget
 // ==============================================================
 
+#homepage-tabs {
+
+  // forces modal opacity
+  & .uk-modal-dialog { opacity: 0; display: none; transition: $transition-ease-slow; }
+  // & .uk-modal-dialog.homepage-tabs-active { opacity: 1; display: block; }
+
+  // controls
+  & .uk-iconnav {
+
+    & a { // arrow links
+      color: $color-primary;
+      background-color: $color-accent;
+      padding: 6px 10px;
+
+      &:hover, &:focus {
+        color: $color-accent;
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  & h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 1;
+    margin: 0;
+  }
+
+  & h2 {
+    font-size: 1.1rem;
+    text-transform: none;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: $color-gray-AAlarge;
+    margin: 0 0 1rem;
+  }
+
+  & hr {
+    border-top: 2px solid $color-primary;
+    width: 60%;
+  }
+
+  & p {
+    font-size: .875rem;
+    @media (min-width:412px) { font-size: 1rem; }
+  }
+
+  & .uk-padding-large { // text div
+    min-height: 402px;
+    background: rgba(255,255,255,.85);
+    border-bottom: 1px solid $color-gray-light;
+    @media (min-width:640px) { border-bottom: 0; }
+  }
+
+  & .uk-height-large { // photo div
+    position: relative;
+    z-index: -1;
+    margin-top: -165px;
+    @media (min-width:640px) { z-index: 0; margin-top: 0; }
+  }
+
+  @media (min-width:412px) {
+    & h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      line-height: 1;
+      position: relative;
+      left: 5px;
+      margin: 0;
+    }
+
+    & h2 {
+      font-size: 1.45rem;
+      text-transform: none;
+      font-style: italic;
+      letter-spacing: -1px;
+      color: $color-gray-AAlarge;
+      margin: 0 0 1rem;
+    }
+  } // end @412
+
+  @media (min-width:640px) {
+    & .uk-height-large { // photo div
+      margin-top: 0 !important;
+    }
+  } // end @640
+
+  @media (min-width:768px) {
+    & .uk-grid-collapse { // grid wrapper
+      min-height: calc(100vh - 101px);
+      height: calc(100vh - 101px);
+    }
+
+    & .uk-height-large { // photo div
+
+      // min-height: 60vh;
+      // height: 60vh;
+    }
+  } // end @768
+
+  @media (min-width:1200px) {
+    & .uk-height-large { //photo div
+      // width: 30%;
+    }
+  } // end @1200
+
+  @media (min-width:1800px) {
+    & .uk-grid-collapse { // grid wrapper
+      // min-height: 75vh;
+      // height: 75vh;
+    }
+
+    & .uk-child-width-1-2\@s > * { // grid child divs
+      // width: 40%;
+    }
+
+    & .uk-height-large { //photo div
+      // min-height: 75vh;
+      // height: 75vh;
+    }
+  } // end @1800
+
+  @media (min-width:2400px) {
+    & .uk-child-width-1-2\@s > * { // grid child divs
+      // width: 30%;
+    }
+  } // end @2400
+}
+
+
 // -----------------------------------------
-// ## homepage slider
-// .homepage-slider {
-//   height: 75vh;
-//   width: 100vw;
-//
-//   // left slides
-//   .home-slide-left {
-//     width: 50vw !important;
-//     height: 75vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     padding: 4% 1% 4% 4%;
-//   }
-//
-//   // right slides
-//   .home-slide-right {
-//     @extend .home-slide-left;
-//     padding: 4% 4% 4% 1%;
-//   }
-//
-// } // end .homepage-slider
+// ## tab one
+
+
+// -----------------------------------------
+// ## tab two
+#homepage-tabs-two {
+  & .uk-height-large {
+    margin-top: -115px;
+    z-index: 0;
+
+    @media (min-height:768px) {
+      min-height: calc(100vh - 100px);
+      height: calc(100vh - 100px);
+    }
+  }
+}

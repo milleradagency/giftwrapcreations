@@ -36,6 +36,16 @@ function getFtpConnection() {
   });
 }
 
+// Babel
+// https://www.npmjs.com/package/gulp-babel
+// npm install --save-dev gulp-babel babel-preset-es2015
+const babel = require('gulp-babel');
+
+// Babel - Babili
+// https://www.npmjs.com/package/gulp-babili
+// npm install gulp-babili --save-dev
+const babili = require("gulp-babili");
+
 // Sass
 // https://www.npmjs.com/package/gulp-sass
 // npm install gulp-sass --save-dev
@@ -73,4 +83,17 @@ gulp.task('default', function () {
 
 gulp.task('watch', function() {
   gulp.watch('assets/scss/**/*.scss', ['default']);
+});
+
+gulp.task('babel', () => {
+  return gulp.src('assets/javascript/app.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+    .pipe(gulp.dest('assets/js'));
 });

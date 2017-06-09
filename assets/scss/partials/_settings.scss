@@ -1,0 +1,66 @@
+// ==============================================================
+// # SETTINGS
+//
+// Settings using the _definitions.scc variables
+// ==============================================================
+
+// ==============================================================
+//
+// # TRANSITIONS
+//
+// ==============================================================
+$transition-ease-fast:                  100ms ease-in-out;
+$transition-ease-normal:                300ms ease-in-out;
+$transition-ease-slow:                  600ms ease-in-out;
+$transition-ease-slower:                900ms ease-in-out;
+
+
+
+
+// ==============================================================
+//
+// # NAVBAR
+//
+// ==============================================================
+
+// -----------------------------------------
+// ## NAVBAR - GLOBALS
+$navbar-link-padding:                   4px 12px;
+$navbar-link-transition-speed:          $transition-ease-normal;
+
+// -----------------------------------------
+// ## NAVBAR - <a> colors
+$navbar-link-color:                     $color-gray-AAA;
+$navbar-link-color-hover:               $color-primary;
+$navbar-link-background:                transparent;
+$navbar-link-background-hover:          $color-accent;
+
+
+
+
+// ==============================================================
+//
+// # LINKS
+//
+// ==============================================================
+
+
+
+
+// ==============================================================
+//
+// # BUTTONS
+//
+// ==============================================================
+
+// -----------------------------------------
+// ## BUTTONS — global
+$button-border-radius:                0;
+$button-transition-speed:             $transition-ease-normal;
+
+// -----------------------------------------
+// ## BUTTONS — form submit
+$button-form-submit-color:            $color-primary;
+$button-form-submit-color-hover:      $color-accent;
+$button-form-submit-background:       $color-accent;
+$button-form-submit-background-hover: $color-primary;

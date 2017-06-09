@@ -32,6 +32,7 @@ jQuery(document).ready(function($) {
 
     // fadeOut the footer
     $("#copyright", ".site-footer").velocity( fadeOut );
+    $(".site-footer").removeClass( "border-animation" );
 
   });
 

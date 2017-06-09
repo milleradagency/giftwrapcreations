@@ -4,6 +4,15 @@
 
 
 // -----------------------------------------
+// ## anita img and name section
+#meetAnitaSection {
+  & .elementor-container.elementor-column-gap-default {
+    max-width: 100%;
+  }
+}
+
+
+// -----------------------------------------
 // ## anita img
 #anitaPhoto {
 
@@ -16,41 +25,121 @@
   }
 }
 
+
 // -----------------------------------------
 // ## split phrase widget "Meet Anita"
 #meetAnita {
   position: absolute;
-  top: -113px;
+  top: -125px;
   right: 0;
+  left: 0;
   z-index: 1;
-  padding: 40px 20px;
-  width: 51%;
+  padding: 20px;
+  width: 100%;
   background: rgba(120,131,144,.65);
 
   // h1 title widget
   & .elementor-heading-title {
     color: white;
+    font-family: sans-serif;
     text-transform: uppercase;
 
     // span one — meet
     & #meet {
-      font-size: 70px;
+      font-size: 55px;
       font-weight: 300;
-      letter-spacing: -5px;
+      letter-spacing: 5px;
       position: relative;
-      left: 27px;
+      left: 22px;
       line-height: 1;
     }
 
     // span two — anita
     & #anita {
-      font-size: 130px;
+      font-size: 90px;
       font-weight: 700;
-      letter-spacing: -10px;
+      letter-spacing: -5px;
       line-height: 0.7;
     }
   } // end .elementor-heading-title
 } // end meetAnita
+
+// -----------------------------------------
+// ## meet anita @media
+@media (min-width:768px) {
+  #meetAnita {
+    position: absolute;
+    top: -113px;
+    right: 0;
+    left: inherit;
+    z-index: 1;
+    padding: 40px 20px;
+    width: 51%;
+    background: rgba(120,131,144,.65);
+
+    // h1 title widget
+    & .elementor-heading-title {
+      color: white;
+      text-transform: uppercase;
+
+      // span one — meet
+      & #meet {
+        font-size: 55px;
+        font-weight: 300;
+        letter-spacing: 5px;
+        position: relative;
+        left: 25px;
+        line-height: 1;
+      }
+
+      // span two — anita
+      & #anita {
+        font-size: 95px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 0.7;
+      }
+    } // end .elementor-heading-title
+  } // end meetAnita
+} // end 768
+
+@media (min-width:1024px) {
+  #meetAnita {
+    position: absolute;
+    top: -113px;
+    right: 0;
+    left: inherit;
+    z-index: 1;
+    padding: 40px 20px;
+    width: 51%;
+    background: rgba(120,131,144,.65);
+
+    // h1 title widget
+    & .elementor-heading-title {
+      color: white;
+      text-transform: uppercase;
+
+      // span one — meet
+      & #meet {
+        font-size: 55px;
+        font-weight: 300;
+        letter-spacing: 5px;
+        position: relative;
+        left: 31px;
+        line-height: 1;
+      }
+
+      // span two — anita
+      & #anita {
+        font-size: 125px;
+        font-weight: 700;
+        letter-spacing: -5px;
+        line-height: 0.7;
+      }
+    } // end .elementor-heading-title
+  } // end meetAnita
+} // end 1024
+
 
 // -----------------------------------------
 // ## anita bio
